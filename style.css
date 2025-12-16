@@ -1,0 +1,48 @@
+<style>
+padding: 60px 20px;
+background: linear-gradient(135deg, #6366f1, #0ea5e9);
+color: #fff;
+}
+.container {
+max-width: 900px;
+margin: 40px auto;
+padding: 0 20px;
+}
+.features li {
+margin: 10px 0;
+}
+.cta {
+text-align: center;
+padding: 50px 20px;
+background: #e0f2fe;
+}
+.cta-button {
+display: inline-block;
+margin-top: 15px;
+padding: 12px 25px;
+background: #2563eb;
+color: #fff;
+text-decoration: none;
+border-radius: 5px;
+}
+.footer {
+text-align: center;
+padding: 20px;
+background: #0f172a;
+color: #fff;
+}
+.footer a {
+color: #fff;
+margin: 0 5px;
+text-decoration: none;
+}
+.contact-form input,
+.contact-form textarea {
+width: 100%;
+padding: 10px;
+margin: 10px 0;
+}
+.contact-form button {
+padding: 10px 20px;
+}
+</style>
