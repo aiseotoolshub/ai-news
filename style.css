@@ -1,158 +1,238 @@
-/* =========================
-FILE: style.css (Updated Professional Design)
-========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #6366f1;
+  --secondary: #0ea5e9;
+  --accent: #22c55e;
+  --dark: #0f172a;
+  --light: #f4f7fd;
+  --text: #1e293b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #f4f7fd;
-  color: #333;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.6;
 }
 
+/* ================= HEADER ================= */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: #0f172a;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background: var(--dark);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
+
 .logo {
-  color: #fff;
-  font-weight: 700;
   font-size: 24px;
-  letter-spacing: 1px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
 }
+
 nav a {
   color: #fff;
-  margin-left: 20px;
   text-decoration: none;
+  margin-left: 24px;
   font-weight: 500;
-  transition: 0.3s;
-}
-nav a:hover {
-  color: #6366f1;
+  transition: color 0.3s ease;
 }
 
-.hero {
-  text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #6366f1, #0ea5e9);
-  color: #fff;
-  position: relative;
-  overflow: hidden;
+nav a:hover {
+  color: var(--secondary);
 }
+
+/* ================= HERO ================= */
+.hero {
+  padding: 110px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+}
+
 .hero h1 {
   font-size: 42px;
-  margin-bottom: 20px;
-}
-.hero p {
-  font-size: 18px;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
+  margin-bottom: 18px;
 }
 
+.hero p {
+  max-width: 860px;
+  margin: auto;
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+/* ================= CONTAINER ================= */
 .container {
   max-width: 1100px;
-  margin: 60px auto;
+  margin: 80px auto;
   padding: 0 20px;
 }
-.features {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-.features li {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  font-weight: 500;
-  transition: transform 0.3s;
-}
-.features li:hover {
-  transform: translateY(-5px);
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 30px;
 }
 
-.cta {
+/* ================= FEATURES ================= */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+.feature {
+  background: #fff;
+  padding: 32px;
+  border-radius: 18px;
   text-align: center;
-  padding: 80px 20px;
-  background: #2563eb;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.feature span {
+  font-size: 44px;
+}
+
+.feature h3 {
+  margin: 16px 0 10px;
+  font-size: 20px;
+}
+
+/* ================= CTA ================= */
+.cta {
+  margin: 90px 40px;
+  padding: 90px 20px;
+  text-align: center;
   color: #fff;
-  border-radius: 20px;
-  margin: 60px 40px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  border-radius: 26px;
+  box-shadow: 0 18px 50px rgba(0,0,0,0.18);
 }
+
 .cta h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 34px;
+  margin-bottom: 16px;
 }
+
 .cta p {
+  max-width: 720px;
+  margin: auto auto 28px;
   font-size: 18px;
-  max-width: 700px;
-  margin: 0 auto 25px;
 }
-.cta-button {
+
+.cta a {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 16px 34px;
   background: #fff;
   color: #2563eb;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 12px;
   text-decoration: none;
-  transition: 0.3s;
-}
-.cta-button:hover {
-  background: #f3f4f6;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.footer {
-  text-align: center;
-  padding: 30px;
-  background: #0f172a;
-  color: #fff;
-  margin-top: 60px;
+.cta a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
+
+/* ================= PAGES ================= */
+.page-box {
+  background: #fff;
+  padding: 60px;
+  border-radius: 22px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+}
+
+.page-box h1 {
+  margin-top: 0;
+}
+
+/* ================= CONTACT FORM ================= */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 16px;
+  margin: 14px 0;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
+}
+
+.contact-form button {
+  margin-top: 10px;
+  padding: 16px 36px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: var(--dark);
+  color: #fff;
+  text-align: center;
+  padding: 32px;
+}
+
 .footer a {
   color: #fff;
   margin: 0 10px;
   text-decoration: none;
-  transition: 0.3s;
-}
-.footer a:hover {
-  color: #6366f1;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 15px;
-  margin: 15px 0;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 16px;
-  transition: border 0.3s;
+.footer a:hover {
+  color: var(--secondary);
 }
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #6366f1;
-  outline: none;
-}
-.contact-form button {
-  padding: 15px 30px;
-  background: #6366f1;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.contact-form button:hover {
-  background: #4f46e5;
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+  nav {
+    margin-top: 12px;
+  }
+  .hero h1 {
+    font-size: 34px;
+  }
+  .cta {
+    margin: 60px 20px;
+  }
 }
